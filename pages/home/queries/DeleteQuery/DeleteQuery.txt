@@ -1,0 +1,3 @@
+UPDATE public."faqs" 
+SET "desc" = {{Date.now()}} 
+WHERE "id" = {{fetch_tabel.selectedRow.id}};

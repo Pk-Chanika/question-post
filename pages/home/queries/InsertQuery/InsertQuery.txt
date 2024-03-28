@@ -1,0 +1,10 @@
+INSERT INTO public."faqs" (
+	"topic",
+	"desc",
+	"tags",
+	"created_by")
+VALUES (
+	'{{insert_form.formData.topic}}',
+	'{{insert_form.formData.desc}}',
+	'{{insert_form.formData.tags}}',
+	'{{appsmith.user.username}}');

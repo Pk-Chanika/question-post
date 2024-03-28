@@ -1,0 +1,9 @@
+UPDATE public."faqs"
+SET 
+"created_at"= '{{fetch_tabel.updatedRow.created_at}}',
+"topic"= '{{fetch_tabel.updatedRow.topic.replace('\'','\'\'')}}',
+"desc"= '{{fetch_tabel.updatedRow.desc}}',
+"tags"= '{{fetch_tabel.updatedRow.tags}}',
+"created_by"= '{{fetch_tabel.updatedRow.created_by}}', 
+"fixed_status"= '{{fetch_tabel.updatedRow.fixed_status}}'
+WHERE "id"= {{fetch_tabel.updatedRow.id}};
