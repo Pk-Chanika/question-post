@@ -1,0 +1,4 @@
+SELECT * FROM public."faqs"
+ORDER BY "{{fetch_tabel.sortOrder.column || 'id'}}" {{fetch_tabel.sortOrder.order || 'ASC'}}
+LIMIT {{fetch_tabel.pageSize}}
+OFFSET {{(fetch_tabel.pageNo - 1) * fetch_tabel.pageSize}};
