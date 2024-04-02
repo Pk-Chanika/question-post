@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 860,
+          "bottomRow": 1670,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -38,6 +38,28 @@
                 "fetch_tabel.sortOrder.order || 'ASC'",
                 "fetch_tabel.pageSize",
                 "fetch_tabel.sortOrder.column || 'id'"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "home_Total_record_public_faqs1",
+              "name": "Total_record_public_faqs1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "home_SelectIssueById",
+              "name": "SelectIssueById",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "fetch_tabel.selectedRow.id"
               ],
               "timeoutInMillisecond": 10000
             }

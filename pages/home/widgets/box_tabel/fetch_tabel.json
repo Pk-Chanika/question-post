@@ -5,7 +5,7 @@
     "iconSVG": "/static/media/icon.db8a9cbd.svg",
     "topRow": 14,
     "isSortable": true,
-    "onPageChange": "{{SelectQuery.run()}}",
+    "onPageChange": "{{SelectQuery.run(); Total_record_public_faqs1.run()}}",
     "type": "TABLE_WIDGET_V2",
     "inlineEditingSaveOption": "ROW_LEVEL",
     "animateLoading": true,
@@ -36,7 +36,7 @@
     "isVisible": "true",
     "enableClientSideSearch": true,
     "version": 3,
-    "totalRecordsCount": "{{SelectQuery.data.length}}",
+    "totalRecordsCount": "{{Total_record_public_faqs1.data[0].count ?? SelectQuery.data.length}}",
     "isLoading": false,
     "onSearchTextChanged": "{{SelectQuery.run()}}",
     "childStylesheet": {
@@ -57,7 +57,8 @@
         }
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "columnUpdatedAt": 1711614855862,
+    "columnUpdatedAt": 1711960021136,
+    "originalBottomRow": 79,
     "primaryColumnId": "id",
     "columnSizeMap": {
         "task": 245,
@@ -72,14 +73,13 @@
         "topic",
         "desc",
         "tags",
-        "created_at",
         "created_by",
-        "fixed_status"
+        "fixed_status",
+        "created_at"
     ],
     "dynamicPropertyPathList": [
         {"key": "primaryColumns.customColumn1.borderRadius"},
         {"key": "primaryColumns.customColumn1.onClick"},
-        {"key": "onPageChange"},
         {"key": "onSearchTextChanged"},
         {"key": "allowAddNewRow"},
         {"key": "tableData"},
@@ -87,11 +87,12 @@
     ],
     "compactMode": "TALL",
     "displayName": "Table",
-    "bottomRow": 66,
+    "bottomRow": 79,
     "parentRowSpace": 10,
     "columnWidthMap": {
         "fixed_status": 153,
         "topic": 327,
+        "created_at": 281,
         "desc": 280
     },
     "hideCard": false,
@@ -101,7 +102,8 @@
         {"key": "onPageChange"},
         {"key": "onSearchTextChanged"},
         {"key": "onSort"},
-        {"key": "onPageSizeChange"}
+        {"key": "onPageSizeChange"},
+        {"key": "onRowSelected"}
     ],
     "primaryColumns": {
         "fixed_status": {
@@ -140,7 +142,7 @@
             "verticalAlignment": "CENTER"
         },
         "created_at": {
-            "computedValue": "{{fetch_tabel.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"created_at\"]))}}",
+            "computedValue": "{{fetch_tabel.processedTableData.map((currentRow, currentIndex) => ( dateFns.format( new Date (currentRow[\"created_at\"]), 'dd/MM/yyyy HH:mm')))}}",
             "isEditable": false,
             "notation": "standard",
             "alias": "created_at",
@@ -156,7 +158,7 @@
             "allowCellWrapping": false,
             "index": 1,
             "isDiscardVisible": true,
-            "isVisible": false,
+            "isVisible": true,
             "label": "created_at",
             "fontStyle": "",
             "textColor": "",
@@ -377,6 +379,7 @@
             "verticalAlignment": "CENTER"
         }
     },
+    "onRowSelected": "{{SelectIssueById.run().then(() => {\n  showModal('Issue_detail');\n});}}",
     "key": "zba5qel0au",
     "derivedColumns": {"customColumn1": {
         "isCellVisible": true,
@@ -402,12 +405,12 @@
         "buttonLabelColor": "#FFFFFF"
     }},
     "labelTextSize": "0.875rem",
-    "rightColumn": 63,
+    "rightColumn": 64,
     "textSize": "0.875rem",
     "widgetId": "hpy3pb4xft",
     "allowAddNewRow": "{{}}",
     "enableServerSideFiltering": false,
-    "tableData": "{{SelectQuery.data}}",
+    "tableData": "{{ SelectQuery.data}}",
     "label": "Data",
     "searchKey": "",
     "parentId": "59rw5mx0bq",
@@ -415,6 +418,7 @@
     "renderMode": "CANVAS",
     "horizontalAlignment": "LEFT",
     "isVisibleSearch": true,
+    "originalTopRow": 14,
     "isVisiblePagination": true,
     "verticalAlignment": "CENTER"
 }

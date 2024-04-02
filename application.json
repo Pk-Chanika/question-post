@@ -3,10 +3,6 @@
     {
       "id": "home",
       "isDefault": true
-    },
-    {
-      "id": "issue-detail",
-      "isDefault": false
     }
   ],
   "viewMode": false,
@@ -36,7 +32,11 @@
   "publishedAppLayout": {
     "type": "FLUID"
   },
-  "unpublishedCustomJSLibs": [],
+  "unpublishedCustomJSLibs": [
+    {
+      "uidString": "$_C_D_F_FG_GJ_KJ_L_P_SG_UK_XJ_aX_dateFns_eX_ej_iX_nX_oX_rX_sX_tX_tj_vK_https://cdn.jsdelivr.net/npm/date-fns@3.6.0/cdn.min.js"
+    }
+  ],
   "publishedCustomJSLibs": [],
   "evaluationVersion": 2,
   "applicationVersion": 2,
