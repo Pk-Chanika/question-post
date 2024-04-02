@@ -1,0 +1,2 @@
+SELECT * FROM public."faqs" 
+WHERE id = '{{fetch_tabel.selectedRow.id}}';
