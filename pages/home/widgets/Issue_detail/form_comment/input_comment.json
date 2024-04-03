@@ -21,6 +21,7 @@
     "showStepArrows": false,
     "isVisible": true,
     "version": 2,
+    "onFocus": "",
     "tags": [
         "Suggested",
         "Inputs"
@@ -30,7 +31,8 @@
     "originalBottomRow": 8,
     "needsErrorInfo": false,
     "mobileBottomRow": 31,
-    "widgetName": "Input1",
+    "widgetName": "input_comment",
+    "dynamicPropertyPathList": [],
     "displayName": "Input",
     "searchTags": [
         "form",
@@ -40,11 +42,11 @@
     ],
     "bottomRow": 8,
     "parentRowSpace": 10,
-    "autoFocus": false,
+    "autoFocus": true,
     "hideCard": false,
     "mobileRightColumn": 27,
     "parentColumnSpace": 6.5625,
-    "dynamicTriggerPathList": [],
+    "dynamicTriggerPathList": [{"key": "onFocus"}],
     "labelPosition": "Top",
     "key": "qtaqau5max",
     "labelTextSize": "0.875rem",

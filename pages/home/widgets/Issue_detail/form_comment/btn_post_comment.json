@@ -3,8 +3,10 @@
     "needsErrorInfo": false,
     "boxShadow": "none",
     "mobileBottomRow": 22,
-    "widgetName": "btn_submit",
+    "widgetName": "btn_post_comment",
+    "onClick": "{{InsertComment.run().then(\n\n()=> SelectCommentByid.run().then(\ninput_comment.setValue('')\n))\ncloseModal('Issue_detail')\n\n}} ",
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+    "dynamicPropertyPathList": [{"key": "onClick"}],
     "displayName": "Button",
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.05d209fafeb13a8569e3b4e97069d9ee.svg",
     "searchTags": [
@@ -19,7 +21,7 @@
     "mobileRightColumn": 63,
     "animateLoading": true,
     "parentColumnSpace": 6.5625,
-    "dynamicTriggerPathList": [],
+    "dynamicTriggerPathList": [{"key": "onClick"}],
     "leftColumn": 48,
     "dynamicBindingPathList": [
         {"key": "buttonColor"},

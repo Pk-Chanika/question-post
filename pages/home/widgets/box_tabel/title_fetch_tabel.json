@@ -10,7 +10,7 @@
     "dynamicTriggerPathList": [],
     "overflow": "NONE",
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-    "leftColumn": 0,
+    "leftColumn": 1,
     "dynamicBindingPathList": [{"key": "fontFamily"}],
     "text": "Issues",
     "labelTextSize": "0.875rem",

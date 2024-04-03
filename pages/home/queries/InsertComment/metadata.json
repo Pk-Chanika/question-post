@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "postgres-plugin",
   "unpublishedAction": {
-    "name": "SelectCommentByid",
+    "name": "InsertComment",
     "datasource": {
       "name": "appsmithdf",
       "pluginId": "postgres-plugin",
@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT * FROM public.\"comment\" WHERE id_faqs = {{fetch_tabel.selectedRow.id}} ;",
+      "body": "INSERT INTO public.\"comment\" ( \"comment\", \"id_faqs\")\n  VALUES ( '{{input_comment.text}}', {{fetch_tabel.selectedRow.id}});",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,7 +26,7 @@
         }
       ]
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -36,15 +36,16 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "fetch_tabel.selectedRow.id"
+      "fetch_tabel.selectedRow.id",
+      "input_comment.text"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2024-04-02T02:38:38Z"
+    "createdAt": "2024-04-02T06:56:18Z"
   },
-  "id": "home_SelectCommentByid",
+  "id": "home_InsertComment",
   "deleted": false,
-  "gitSyncId": "6603c0e38c2c73194ba6e408_660b6faed6cbf451dd90a2af"
+  "gitSyncId": "6603c0e38c2c73194ba6e408_660bac124844827a5afd84fb"
 }

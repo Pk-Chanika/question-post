@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1670,
+          "bottomRow": 940,
           "containerStyle": "none",
           "snapRows": 125,
           "parentRowSpace": 1,
@@ -43,6 +43,16 @@
             }
           ],
           [
+            {
+              "id": "home_SelectCommentByid",
+              "name": "SelectCommentByid",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "fetch_tabel.selectedRow.id"
+              ],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "home_Total_record_public_faqs1",
               "name": "Total_record_public_faqs1",

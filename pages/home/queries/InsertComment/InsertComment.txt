@@ -1,0 +1,2 @@
+INSERT INTO public."comment" ( "comment", "id_faqs")
+  VALUES ( '{{input_comment.text}}', {{fetch_tabel.selectedRow.id}});
