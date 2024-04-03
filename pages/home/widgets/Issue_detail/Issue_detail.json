@@ -4,6 +4,7 @@
     "mobileBottomRow": 60,
     "widgetName": "Issue_detail",
     "isCanvas": true,
+    "dynamicPropertyPathList": [{"key": "onClose"}],
     "displayName": "Modal",
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.b374721fa8e1aeab7cf326c2d865506f.svg",
     "searchTags": [
@@ -21,7 +22,7 @@
     "minHeight": 240,
     "animateLoading": true,
     "parentColumnSpace": 17.144775390625,
-    "dynamicTriggerPathList": [],
+    "dynamicTriggerPathList": [{"key": "onClose"}],
     "leftColumn": 22,
     "dynamicBindingPathList": [{"key": "borderRadius"}],
     "children": [{
@@ -81,6 +82,7 @@
     "renderMode": "CANVAS",
     "isLoading": false,
     "mobileTopRow": 36,
+    "onClose": "{{input_comment.setValue('') }}",
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 22,
     "maxDynamicHeight": 9000,

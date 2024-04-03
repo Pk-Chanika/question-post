@@ -3,7 +3,7 @@
     "onSort": "{{SelectQuery.run()}}",
     "isVisibleDownload": true,
     "iconSVG": "/static/media/icon.db8a9cbd.svg",
-    "topRow": 14,
+    "topRow": 15,
     "isSortable": true,
     "onPageChange": "{{SelectQuery.run(); Total_record_public_faqs1.run()}}",
     "type": "TABLE_WIDGET_V2",
@@ -57,7 +57,7 @@
         }
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "columnUpdatedAt": 1711960021136,
+    "columnUpdatedAt": 1712048434616,
     "originalBottomRow": 79,
     "primaryColumnId": "id",
     "columnSizeMap": {
@@ -69,10 +69,10 @@
     "defaultPageSize": 0,
     "columnOrder": [
         "customColumn1",
-        "id",
         "topic",
         "desc",
         "tags",
+        "id",
         "created_by",
         "fixed_status",
         "created_at"
@@ -83,11 +83,12 @@
         {"key": "onSearchTextChanged"},
         {"key": "allowAddNewRow"},
         {"key": "tableData"},
-        {"key": "primaryColumns.topic.isCellEditable"}
+        {"key": "primaryColumns.topic.isCellEditable"},
+        {"key": "onRowSelected"}
     ],
     "compactMode": "TALL",
     "displayName": "Table",
-    "bottomRow": 79,
+    "bottomRow": 80,
     "parentRowSpace": 10,
     "columnWidthMap": {
         "fixed_status": 153,
@@ -125,7 +126,7 @@
             "index": 6,
             "isDiscardVisible": true,
             "isVisible": true,
-            "label": "fixed_status",
+            "label": "fixed status",
             "fontStyle": "",
             "textColor": "",
             "columnType": "checkbox",
@@ -159,7 +160,7 @@
             "index": 1,
             "isDiscardVisible": true,
             "isVisible": true,
-            "label": "created_at",
+            "label": "create date",
             "fontStyle": "",
             "textColor": "",
             "columnType": "text",
@@ -210,7 +211,7 @@
             "verticalAlignment": "CENTER"
         },
         "customColumn1": {
-            "computedValue": "{{fetch_tabel.processedTableData.map((currentRow, currentIndex) => ( currentIndex + 1\n))}}",
+            "computedValue": "{{fetch_tabel.processedTableData.map((currentRow, currentIndex) => ( currentIndex + 1))}}",
             "isEditable": false,
             "notation": "standard",
             "alias": "No",
@@ -379,7 +380,7 @@
             "verticalAlignment": "CENTER"
         }
     },
-    "onRowSelected": "{{SelectIssueById.run().then(() => {\n  showModal('Issue_detail');\n});}}",
+    "onRowSelected": "{{SelectIssueById.run().then(() => {\n  showModal('Issue_detail');\n});\nSelectCommentByid.run()\n}}",
     "key": "zba5qel0au",
     "derivedColumns": {"customColumn1": {
         "isCellVisible": true,
